@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+  <title>Sample Code</title>
+</head>
+<body>
+  <form action="https://qahpp.acquired.com" method="POST">
+    <input type="hidden" name="company_id" value="339">
+    <input type="hidden" name="company_mid_id" value="1477">
+    <input type="hidden" name="currency_code_iso3" value="GBP">
+    <input type="hidden" name="transaction_type" value="AUTH_CAPTURE"> 
+    <input type="hidden" name="merchant_order_id" value="709334441156"> 
+    <input type="hidden" name="amount" value="100">
+    <input type="hidden" name="hash" value="87cf2360d97c4d5cd2015eaedbaf01f4ddf728a1bb79c7f3cb33b6d0b2ee5164">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+<script type="text/javascript">
+  var parentWindow;
+  
+  // `true` if window has parent
+  var hasParent = !!((parentWindow = window.opener || window.parent) && parentWindow !== window);
+  
+  // `true` if window was opened in new tab
+  var isWindowOpen = !!(window.opener && window.opener === parentWindow);
+  
+  hasParent && parentWindow.console.log(isWindowOpen);
+</script>
+</html>
